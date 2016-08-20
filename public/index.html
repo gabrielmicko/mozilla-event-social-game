@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta href="utf-8">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <header>
+      <img src="/img/mozilla.svg" alt="Mozilla logo">
+      <nav>
+        <ul>
+          <li class="active takesnap">Take snapshot</li>
+          <li>Inventory</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="widebg">
+        <div class="workspace">
+          <h3>Create your custom event selfie.</h3>
+          <div class="canvas-holder">
+            <div class="fa fa-camera"></div>
+            <canvas></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="slideshow">
+        <div class="toggle">
+          <div class="fa fa-angle-up"></div>
+          <div class="fa fa-angle-down"></div>
+        </div>
+        <div class="separate">
+          <h2>Pick a Mozilla logo</h2>
+          <div class="slide mozimage">
+            <div class="left"><span class="fa fa-angle-left"></span></div>
+            <div class="fixer">
+              <div class="holder">
+                <div class="mover" style="margin-left:-375px;">
+                  <div class="img" data-img="/logos/mozilla/firefox.png" style="background-image:url('/logos/mozilla/firefox.png');"></div>
+                  <div class="img" data-img="/logos/mozilla/fox.png" style="background-image:url('/logos/mozilla/fox.png');"></div>
+                  <div class="img" data-img="/logos/mozilla/dino.png" style="background-image:url('/logos/mozilla/dino.png');"></div>
+                  <div class="img on" data-img="/logos/mozilla/mozilla.png" style="background-image:url('/logos/mozilla/mozilla.png');"></div>
+                </div>
+              </div>
+            </div>
+            <div class="right"><span class="fa fa-angle-right"></span></div>
+          </div>
+        </div>
+        <div class="separate">
+          <h2>Pick an event logo</h2>
+          <div class="slide eveimg">
+            <div class="left"><span class="fa fa-angle-left"></span></div>
+            <div class="fixer">
+              <div class="holder">
+                <div class="mover" style="margin-left:75px;">
+                  <div class="img on" data-img="/logos/event/braziljs-old.png" style="background-image:url('/logos/event/braziljs-old.png');"></div>
+                  <div class="img" data-img="/logos/event/braziljs.png" style="background-image:url('/logos/event/braziljs.png');"></div>
+                  <div class="img" data-img="/logos/event/braziljs-text.png" style="background-image:url('/logos/event/braziljs-text.png');"></div>
+                </div>
+              </div>
+            </div>
+            <div class="right"><span class="fa fa-angle-right"></span></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <video autoplay="autoplay"></video>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/moz.js"></script>
+  </body>
+</html>
