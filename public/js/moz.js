@@ -11,8 +11,8 @@ var snapShot = false;
 var constraints = {
   audio: false,
   video: {mandatory: {
-    width: { min: 640 },
-    height: { min: 480 }
+    maxWidth: 640,
+    maxHeight: 480
   }}
 };
 
@@ -65,8 +65,13 @@ function handleError() {
 }
 
 cam.on('click', function() {
-  navigator.mediaDevices.getUserMedia(constraints).
-then(handleSuccess).catch(handleError);
+  if(navigator.mediaDevices.getUserMedia) {
+			navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
+	}
+	else {
+		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+		navigator.getUserMedia({video:true}, handleSuccess, handleError);
+	}
 });
 
 var mozimage = $('.slide.mozimage');
