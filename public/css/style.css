@@ -226,6 +226,15 @@ main .canvas-holder {
   position: relative;
 }
 
+main .snap {
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	margin: 30px auto;
+	display: block;
+	text-decoration: none;
+}
+
 main .canvas-holder .fa-camera {
   color: #fff;
   position: absolute;

@@ -27,7 +27,9 @@ takeSnap.on('click', function() {
     dataType: "html",
     success: function(result) {
       result = JSON.parse(result);
-      window.open('/result#' + result.hash);
+      $('.snap').attr('href', '/result#' + result.hash);
+      snapShot = false;
+      cam.on('click');
     }
   });
 });
@@ -60,7 +62,8 @@ function make_base() {
   //context.drawImage(baseEveImg, 502, 352, 128, 128);
 }
 
-video.addEventListener('play', function () {
+
+function playy() {
   var $this = this; //cache
   (function loop() {
       if (!$this.paused && !$this.ended) {
@@ -71,7 +74,9 @@ video.addEventListener('play', function () {
           }
       }
   })();
-});
+}
+
+video.addEventListener('play', playy);
 function handleError() {
 
 }

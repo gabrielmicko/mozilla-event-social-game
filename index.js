@@ -15,10 +15,12 @@ function getRS() {
 app.use(bodyParser.json({
 	'limit': '50mb'
 }));
+
 app.use(bodyParser.urlencoded({
   'extended': true,
 	'limit': '50mb'
 }));
+
 app.use(express.static('public'));
 
 app.get('/result', function(req, resp) {
@@ -34,9 +36,8 @@ app.post('/savecanvas', function(req, resp) {
 	var randomString = getRS();
 
 	fs.writeFile('./public/img/generated/pic/' + randomString + '.png', base64Data, 'base64', function(err) {
-		var qr_svg = qr.image('http://mozilla.webrtc.rocks/img/generated/pic/' + randomString + '.png', { type: 'svg' });
+		var qr_svg = qr.image('https://mozilla.webrtc.rocks/img/generated/pic/' + randomString + '.png', { type: 'svg' });
 		qr_svg.pipe(fs.createWriteStream('./public/img/generated/qr/' + randomString + '.svg'));
- 		//var svg_string = qr.imageSync('I love QR!', { type: 'svg' });
 		resp.send({
 			'hash': randomString,
 		});
