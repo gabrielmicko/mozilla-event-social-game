@@ -27,6 +27,7 @@ takeSnap.on('click', function() {
     dataType: "html",
     success: function(result) {
       result = JSON.parse(result);
+      alert('Picture has been generated!');
       $('.snap').attr('href', '/result#' + result.hash);
     }
   });
