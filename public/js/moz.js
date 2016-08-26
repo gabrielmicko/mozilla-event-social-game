@@ -28,8 +28,6 @@ takeSnap.on('click', function() {
     success: function(result) {
       result = JSON.parse(result);
       $('.snap').attr('href', '/result#' + result.hash);
-      snapShot = false;
-      cam.on('click');
     }
   });
 });
