@@ -18,6 +18,18 @@ var constraints = {
 
 takeSnap.on('click', function() {
   snapShot = true;
+
+  $.ajax({
+    url: '/savecanvas',
+    method: "POST",
+    dataType: "json",
+    data: { canvas : canvas.toDataURL("image/png") },
+    dataType: "html",
+    success: function(result) {
+      result = JSON.parse(result);
+      window.open('/result#' + result.hash);
+    }
+  });
 });
 
 toggle.on('click', function() {
@@ -40,12 +52,12 @@ function handleSuccess(stream) {
 baseMozImg = new Image();
 baseMozImg.src = mozImage;
 
-baseEveImg = new Image();
-baseEveImg.src = eveImage;
+// baseEveImg = new Image();
+// baseEveImg.src = eveImage;
 
 function make_base() {
-  context.drawImage(baseMozImg, 10, 352, 128, 128);
-  context.drawImage(baseEveImg, 502, 352, 128, 128);
+  context.drawImage(baseMozImg, 0, 0, 640, 480);
+  //context.drawImage(baseEveImg, 502, 352, 128, 128);
 }
 
 video.addEventListener('play', function () {

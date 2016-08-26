@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Mozilla - Events social game</title>
+    <meta href="utf-8">
+    <style>
+    #pic, #qr {
+      margin: 0 auto;
+      display: block;
+    }
+    #link {
+      margin: 5px 0;
+      text-align: center;
+      font-size: 30px;
+    }
+    </style>
+  </head>
+  <body>
+    <img src="" id="pic" width="640" height="480">
+    <div id="link"></div>
+    <img src="" id="qr" width="150" height="150">
+  </body>
+  <script src="/js/jquery.js"></script>
+  <script>
+    var hash = window.location.hash.substring(1, window.location.hash.length);
+    $('#pic').attr('src', '/img/generated/pic/' + hash + '.png');
+    $('#qr').attr('src', '/img/generated/qr/' + hash + '.svg');
+    $('#link').html('http://mozilla.webrtc.rocks/img/generated/pic/' + hash + '.png');
+  </script>
+</html>

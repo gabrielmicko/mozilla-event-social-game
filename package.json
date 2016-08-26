@@ -10,5 +10,11 @@
   "license": "ISC",
   "devDependencies": {
     "express": "^4.14.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "fs": "0.0.1-security",
+    "qr-image": "^3.1.0",
+    "randomstring": "^1.1.5"
   }
 }
