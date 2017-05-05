@@ -1,2 +1,3 @@
 node_modules
 public/img/generated
+config/default.json
