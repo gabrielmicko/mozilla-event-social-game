@@ -31,7 +31,6 @@ header {
 }
 
 header img {
-  height: 30px;
   float: left;
   display: block;
   padding: 10px 0;
@@ -157,7 +156,7 @@ main .slideshow  h2 {
 
 main .workspace {
   background-color: rgba(0,20,40,0.5);
-  padding-bottom: 300px;
+  padding-bottom: 205px;
 }
 
 main .widebg {
@@ -222,6 +221,38 @@ main .slideshow.open .toggle .fa-angle-up {
 	display: none;
 }
 
+main .slideshow .recent-snapshots {
+  width: 80%;
+  margin: 60px auto 0;
+
+}
+main .slideshow .recent-snapshots .snapshots-container {
+  overflow-x: auto;
+  height: 72px;
+  width: 100%;
+}
+main .slideshow .recent-snapshots a {
+  cursor: pointer;
+  opacity: 0.5;
+}
+main .slideshow .recent-snapshots p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 0;
+}
+main .slideshow .recent-snapshots a:hover {
+  opacity: 1;
+}
+
+main .slideshow .recent-snapshots a img {
+  display: block;
+  width: 96px;
+  height: 72px;
+  float: left;
+  padding: 5px;
+}
+
 main .canvas-holder {
   position: relative;
 }
@@ -266,4 +297,8 @@ canvas {
 
 video {
   display: none;
+}
+
+.mozlogo {
+  width: 120px;
 }
